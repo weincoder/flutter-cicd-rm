@@ -48,4 +48,4 @@ git config commit.template .gitmessage.conf
 Recuerda que una vez hecho esto no debe utilizar el git commit -m sino que **unicamente copiar git commit**. De esta forma te mostrar el editor, para agregar texto debes presionar la letra “i” de insertar, debes borrar el numeral  que implique tu cambio y describirlo luego presionar escape (esc) y “:wq” para guardar los cambio o “:qa!” para descartarlos.
 
 ## Autores del Documento
- - Daniel Herrera 1/8/2024 y (weincoder)
+ - Daniel Herrera 1/8/2024 (weincoder)
