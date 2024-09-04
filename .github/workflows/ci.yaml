@@ -4,7 +4,7 @@ on:
     branches:
       - master
   path:
-    - app_devops/
+    - app_devops/*
 
 jobs:
   test_analyze_app:
