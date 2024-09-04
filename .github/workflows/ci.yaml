@@ -3,8 +3,6 @@ on:
   pull_request:
     branches:
       - master
-  path:
-    - app_devops/*
 
 jobs:
   test_analyze_app:
@@ -19,5 +17,8 @@ jobs:
         with:
           channel: "stable"
       - run: flutter pub get
+        working-directory: ./app_devops
       - run: flutter analyze
+        working-directory: ./app_devops
       - run: flutter test
+        working-directory: ./app_devops
