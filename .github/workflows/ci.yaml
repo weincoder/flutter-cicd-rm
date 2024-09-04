@@ -18,11 +18,11 @@ jobs:
           channel: "stable"
       - name: Instalar dependencias
         run: flutter pub get
-        working-directory: app_test/
+        working-directory: app_devops/
       - name: Ejecutar pruebas
         run: flutter test
-        working-directory: app_test/
+        working-directory: app_devops/
       - name: Analizar código
         run: flutter analyze
-        working-directory: app_test/
+        working-directory: app_devops/
 
