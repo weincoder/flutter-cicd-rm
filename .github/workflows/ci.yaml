@@ -19,11 +19,11 @@ jobs:
       - name: Instalar dependencias 📦
         run: flutter pub get
         working-directory: app_devops/
-      - name: Ejecutar pruebas 🧪
-        run: flutter test
-        working-directory: app_devops/
       - name: Analizar código 🧐
         run: flutter analyze
+        working-directory: app_devops/
+      - name: Ejecutar pruebas 🧪
+        run: flutter test
         working-directory: app_devops/
   construir_ios:
     name: Build Flutter (iOS)
