@@ -5,7 +5,7 @@ on:
   push:
     branches: [ "main", "develop", "release" ]
 jobs:
-  test_analyze_app:
+  ejecutar_pruebas:
     name: Ejecutar pruebas del proyecto
     runs-on: ubuntu-latest
     steps:
@@ -16,13 +16,55 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable"
-      - name: Instalar dependencias
+      - name: Instalar dependencias 📦
         run: flutter pub get
         working-directory: app_devops/
-      - name: Ejecutar pruebas
+      - name: Ejecutar pruebas 🧪
         run: flutter test
         working-directory: app_devops/
-      - name: Analizar código
+      - name: Analizar código 🧐
         run: flutter analyze
         working-directory: app_devops/
+  construir_ios:
+    name: Build Flutter (iOS)
+    needs: [flutter_test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - name: Instalar dependencias 📦
+        run: flutter pub get
+        working-directory: app_devops/
+      - name: Limpiar proyecto 🧹
+        run: flutter clean
+        working-directory: app_devops/
+      - name: Construir aplicación 🚀
+        run: flutter build ios --release --no-codesign
+        working-directory: app_devops/
 
+  construir_appbundle:
+    name: Build Flutter (Android)
+    needs: [flutter_test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - name: Instalar dependencias 📦
+        run: flutter pub get
+        working-directory: app_devops/
+      - name: Limpiar proyecto 🧹
+        run: flutter clean
+        working-directory: app_devops/
+      - name: Construir aplicación 🚀
+        run: flutter build appbundle
+        working-directory: app_devops/
