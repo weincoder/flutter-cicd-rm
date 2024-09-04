@@ -69,13 +69,3 @@ Las consecuencias por violar este código dependerán de la gravedad de la infra
 ## Referencias
 
 Este código de conducta está adaptado de [Contributor Covenant]([https://www.contributor-covenant.org/version/2/1/code_of_conduct.html]).
-
-**[Agregar enlaces a las referencias en español si están disponibles]**
-
-**Nota:** 
-
-* **Personaliza:** Adapta este código a las necesidades específicas de tu comunidad.
-* **Difusión:** Asegúrate de que todos los miembros de la comunidad conozcan este código.
-* **Actualización:** Revisa y actualiza este código periódicamente para mantenerlo relevante.
-
-Este código de conducta es una herramienta esencial para fomentar una comunidad inclusiva y respetuosa. Al seguir estas pautas, podemos crear un espacio donde todos se sientan bienvenidos y valorados.
