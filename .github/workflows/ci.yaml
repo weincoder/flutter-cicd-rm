@@ -27,7 +27,7 @@ jobs:
         working-directory: app_devops/
   construir_ios:
     name: Build Flutter (iOS)
-    needs: [flutter_test]
+    needs: [ejecutar_pruebas]
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -49,7 +49,7 @@ jobs:
 
   construir_appbundle:
     name: Build Flutter (Android)
-    needs: [flutter_test]
+    needs: [ejecutar_pruebas]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
