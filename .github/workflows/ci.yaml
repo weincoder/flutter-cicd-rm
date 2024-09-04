@@ -1,9 +1,9 @@
 name: CI
 on:
   pull_request:
-    branches: [ "master", "develop", "release" ]
+    branches: [ "main", "develop", "release" ]
   push:
-    branches: [ "master", "develop", "release" ]
+    branches: [ "main", "develop", "release" ]
 jobs:
   test_analyze_app:
     name: Ejecutar pruebas del proyecto 
