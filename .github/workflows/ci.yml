@@ -16,9 +16,12 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable"
-      - run: flutter pub get
+      - name: Instalar dependencias
+        run: flutter pub get
         working-directory: ./app_devops
-      - run: flutter analyze
+      - name: Analizar código
+        run: flutter analyze
         working-directory: ./app_devops
-      - run: flutter test
+      - name: Ejecutar pruebas
+        run: flutter test
         working-directory: ./app_devops
